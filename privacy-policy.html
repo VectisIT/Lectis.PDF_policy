@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Politique de confidentialité de l'application Android Lectis PDF, éditée par Vectis IT.">
+<title>Lectis PDF – Politique de confidentialité</title>
+<style>
+  :root{
+    --bg:#EEF0F2;
+    --surface:#FFFFFF;
+    --surface-alt:#F6F7F9;
+    --ink:#1C222B;
+    --ink-muted:#5B6472;
+    --ink-faint:#8A93A0;
+    --border:#DEE2E7;
+    --accent:#C4293A;
+    --accent-tint:#FBE7E9;
+    --positive:#1E7A50;
+    --positive-tint:#E4F3EA;
+    --shadow: 0 1px 2px rgba(28,34,43,0.04), 0 8px 24px rgba(28,34,43,0.06);
+  }
+  :root:not([data-theme="light"]){
+    @media (prefers-color-scheme: dark){
+      --bg:#14161A;
+      --surface:#1B1E23;
+      --surface-alt:#20242A;
+      --ink:#ECEEF1;
+      --ink-muted:#9BA3AF;
+      --ink-faint:#6C7581;
+      --border:#2C3138;
+      --accent:#FF8079;
+      --accent-tint:#3A1F22;
+      --positive:#57C48D;
+      --positive-tint:#173226;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 28px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14161A;
+    --surface:#1B1E23;
+    --surface-alt:#20242A;
+    --ink:#ECEEF1;
+    --ink-muted:#9BA3AF;
+    --ink-faint:#6C7581;
+    --border:#2C3138;
+    --accent:#FF8079;
+    --accent-tint:#3A1F22;
+    --positive:#57C48D;
+    --positive-tint:#173226;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 28px rgba(0,0,0,0.35);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:ui-sans-serif, system-ui, sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2{
+    font-family:ui-serif, Georgia, serif;
+    color:var(--ink);
+    text-wrap:balance;
+    font-weight:600;
+  }
+  code, .mono{
+    font-family:ui-monospace, SFMono-Regular, monospace;
+  }
+  a{ color:var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+  .page{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  header.doc-head{
+    margin-bottom: 40px;
+  }
+  .eyebrow{
+    font-family:ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom: 14px;
+  }
+  .eyebrow .dot{ color: var(--ink-faint); }
+  h1.title{
+    font-size: clamp(28px, 4vw, 38px);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 6px 18px;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+  .meta-row span b{ color: var(--ink); font-weight:600; }
+
+  .summary-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 32px 0 44px;
+  }
+  .summary-tile{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 14px;
+    box-shadow: var(--shadow);
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+  }
+  .summary-tile svg{
+    width:20px; height:20px;
+    color: var(--positive);
+    flex-shrink:0;
+  }
+  .summary-tile span{
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height:1.35;
+  }
+
+  section{
+    margin: 40px 0;
+  }
+  section h2{
+    font-size: 21px;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  section p{
+    margin: 0 0 14px;
+    color: var(--ink);
+    max-width: 66ch;
+  }
+  section p.muted{ color: var(--ink-muted); font-size: 14px; }
+  ul.plain{
+    margin: 0 0 14px;
+    padding-left: 20px;
+  }
+  ul.plain li{ margin-bottom: 6px; max-width: 62ch; }
+
+  .table-wrap{
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 480px;
+  }
+  thead th{
+    text-align:left;
+    font-family:ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+    font-weight:600;
+    padding: 12px 16px;
+    background: var(--surface-alt);
+    border-bottom: 1px solid var(--border);
+  }
+  tbody td{
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--ink);
+  }
+  tbody tr:last-child td{ border-bottom: none; }
+  td.mono{ color: var(--ink-muted); font-size: 12.5px; white-space: nowrap; }
+
+  .badge-no{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    font-family:ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--positive);
+    background: var(--positive-tint);
+    border-radius: 999px;
+    padding: 3px 9px 3px 7px;
+    white-space:nowrap;
+  }
+
+  .callout{
+    background: var(--accent-tint);
+    border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .callout b{ color: var(--accent); }
+
+  footer.doc-foot{
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  @media (max-width: 520px){
+    .page{ padding: 40px 18px 72px; }
+    thead{ display:none; }
+    table, tbody, tr, td{ display:block; width:100%; box-sizing:border-box; }
+    table{ min-width:0; }
+    tbody tr{ border-bottom: 1px solid var(--border); padding: 12px 16px; }
+    tbody tr:last-child{ border-bottom:none; }
+    tbody td{ border-bottom:none; padding: 3px 0; }
+    tbody td.mono::before{ content: attr(data-label) ": "; color: var(--ink-faint); }
+    tbody td:not(.mono)::before{ content: attr(data-label); display:block; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:10px; text-transform:uppercase; letter-spacing:.06em; color: var(--ink-faint); margin-bottom:2px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="doc-head">
+    <div class="eyebrow">VECTIS IT <span class="dot">·</span> LECTIS PDF</div>
+    <h1 class="title">Politique de confidentialité</h1>
+    <div class="meta-row">
+      <span>Dernière mise à jour <b>26 octobre 2026</b></span>
+      <span>Version de l'app <b>1.0.0</b></span>
+      <span>Plateforme <b>Android</b></span>
+    </div>
+  </header>
+
+  <div class="summary-grid">
+    <div class="summary-tile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+      <span>Aucune donnée personnelle collectée</span>
+    </div>
+    <div class="summary-tile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <span>Tout reste sur votre appareil</span>
+    </div>
+    <div class="summary-tile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke-dasharray="3 3"/></svg>
+      <span>Aucun compte, aucune inscription</span>
+    </div>
+    <div class="summary-tile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18M10.5 5.2A9 9 0 0121 12c0 1-.2 2-.5 2.8M6.2 6.2A8.9 8.9 0 003 12a9 9 0 0015.8 5.8"/></svg>
+      <span>Aucune publicité, aucun traceur</span>
+    </div>
+  </div>
+
+  <section>
+    <p><b>Lectis PDF</b> est une application de lecture de fichiers PDF, éditée par <b>Vectis IT</b>. Cette page explique, simplement et de façon exhaustive, ce qu'il advient de vos fichiers et de vos données lorsque vous utilisez l'application.</p>
+    <p class="muted">Elle s'applique à toutes les versions de Lectis PDF actuellement publiées ou à venir, sur Android et toute autre plateforme sur laquelle l'application serait distribuée.</p>
+  </section>
+
+  <section>
+    <h2>Ce que l'application stocke, et où</h2>
+    <p>Lectis PDF ne dispose d'aucun serveur. Aucune information ci-dessous ne quitte jamais votre appareil. La sauvegarde automatique d'Android (Google Drive) est désactivée pour l'application : vos documents et votre liste de récents n'y sont pas copiés.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Donnée</th><th>Où elle est stockée</th><th>Pourquoi</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Donnée">Une copie des fichiers PDF que vous ouvrez</td>
+            <td data-label="Stockage">Stockage privé de l'app sur l'appareil</td>
+            <td data-label="Pourquoi">Pour pouvoir rouvrir un document sans redemander l'accès au fichier d'origine</td>
+          </tr>
+          <tr>
+            <td data-label="Donnée">Copie temporaire d'un PDF en cours d'import</td>
+            <td data-label="Stockage">Cache privé de l'app sur l'appareil</td>
+            <td data-label="Pourquoi">Transférer le fichier vers le stockage privé ; supprimée dès la fin de l'import</td>
+          </tr>
+          <tr>
+            <td data-label="Donnée">Liste des fichiers récents (nom, date d'ouverture)</td>
+            <td data-label="Stockage">Préférences locales de l'appareil</td>
+            <td data-label="Pourquoi">Afficher l'écran d'accueil « fichiers récents »</td>
+          </tr>
+          <tr>
+            <td data-label="Donnée">Préférence de thème (clair / sombre)</td>
+            <td data-label="Stockage">Préférences locales de l'appareil</td>
+            <td data-label="Pourquoi">Retenir votre choix d'affichage</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Autorisations et accès à vos fichiers</h2>
+    <p>Lectis PDF ne demande <b>aucune autorisation d'accès au stockage</b>. L'application ne peut lire que les fichiers que vous lui confiez vous-même, un par un, de l'une des façons suivantes :</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Accès</th><th>Fonctionnement</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Accès">Bouton « Ouvrir un PDF »</td>
+            <td data-label="Fonctionnement">Le sélecteur de documents d'Android s'ouvre ; seul le fichier que vous choisissez est transmis à l'application</td>
+          </tr>
+          <tr>
+            <td data-label="Accès">« Ouvrir avec » / « Partager vers »</td>
+            <td data-label="Fonctionnement">Lorsque vous ouvrez ou partagez un PDF depuis une autre application (messagerie, Drive, gestionnaire de fichiers…) et choisissez Lectis PDF, seul ce fichier est transmis à l'application</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="margin-top:14px;">Aucune autre autorisation n'est demandée : ni stockage, ni caméra, ni contacts, ni localisation, ni micro, ni accès réseau.</p>
+  </section>
+
+  <section>
+    <h2>Partager ou imprimer un document</h2>
+    <p>Les fonctions <b>Partager</b> et <b>Imprimer</b> ouvrent les outils natifs de votre système d'exploitation (la feuille de partage Android, ou un service d'impression). Le fichier n'est transmis qu'à l'application ou au service que <em>vous</em> choisissez à ce moment précis. Lectis PDF ne conserve et ne reçoit aucune information sur cette action une fois la feuille système ouverte.</p>
+  </section>
+
+  <section>
+    <h2>Liens contenus dans les documents</h2>
+    <p>Si vous touchez un lien web présent dans un PDF, Lectis PDF affiche d'abord l'adresse complète et vous demande confirmation. Le lien s'ouvre ensuite dans votre navigateur ; Lectis PDF elle-même n'accède jamais à Internet. Seuls les liens web (<span class="mono">http</span>, <span class="mono">https</span>) et e-mail (<span class="mono">mailto</span>) peuvent être ouverts.</p>
+  </section>
+
+  <section>
+    <h2>Ce que nous ne faisons pas</h2>
+    <ul class="plain">
+      <li><span class="badge-no">✕</span>&nbsp; Pas d'outils d'analyse ou de mesure d'audience</li>
+      <li><span class="badge-no">✕</span>&nbsp; Pas de SDK publicitaire</li>
+      <li><span class="badge-no">✕</span>&nbsp; Pas de compte utilisateur ni de mot de passe à créer</li>
+      <li><span class="badge-no">✕</span>&nbsp; Pas de synchronisation ou de sauvegarde vers un serveur, y compris la sauvegarde Google Drive d'Android</li>
+      <li><span class="badge-no">✕</span>&nbsp; Pas de vente, de partage ou de location de données à des tiers — il n'y a rien à vendre, rien n'est collecté</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Conservation et suppression</h2>
+    <p>Les fichiers et préférences décrits plus haut restent sur votre appareil tant que l'application y est installée. Supprimer un document depuis l'écran d'accueil de Lectis PDF efface aussi sa copie locale et son entrée dans les récents. Désinstaller l'application supprime l'intégralité de ces données.</p>
+  </section>
+
+  <section>
+    <h2>Enfants</h2>
+    <p>Lectis PDF n'est pas conçue pour les enfants et ne collecte, sciemment ou non, aucune donnée relative à des mineurs.</p>
+  </section>
+
+  <section>
+    <h2>Modifications de cette politique</h2>
+    <div class="callout">Si une future version de Lectis PDF ajoute un service tiers (par exemple un outil de suivi des plantages), cette page sera mise à jour <b>avant</b> la publication de cette version, avec une nouvelle date de mise à jour ci-dessus.</div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Pour toute question sur cette politique ou sur vos données : <a href="mailto:vectisit@outlook.fr">vectisit@outlook.fr</a></p>
+  </section>
+
+  <footer class="doc-foot">
+    <span>© 2026 Vectis IT</span>
+    <span>Lectis PDF — <span class="mono">com.lectis.pdf</span></span>
+  </footer>
+
+</div>
+</body>
+</html>
